@@ -1,0 +1,135 @@
+/* MAIN (start) */
+.future-block {
+  background-color: $white;
+
+  &__text {
+    padding-top: 180px;
+    padding-bottom: 135px;
+    padding-right: 390px;
+
+    @media all and (max-width: $tablet-bp) { padding: 15px }
+  }
+
+  &__photo {
+    position: absolute;
+    right: 0;
+    top: 108px;
+    background-color: $purple;
+
+    @media all and (max-width: $tablet-bp) {
+      position: relative;
+      top: 0;
+      margin-top: 36px;
+      margin-bottom: 36px;
+      background-color: transparent;
+    }
+
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 60%;
+      background-color: $white;
+      content: '';
+
+      @media all and (max-width: $tablet-bp) { display: none }
+    }
+
+    .future-img {
+      width: 460px;
+      transform: translateX(-390px) translateY(36px);
+      z-index: 2;
+
+      @media all and (max-width: $tablet-bp) {
+        width: 100%;
+        transform: none;
+      }
+    }
+  }
+
+  &--purple {
+    background-color: $purple;
+
+    .future-block__text {
+      color: $white;
+
+      .header-2 { color: $white }
+    }
+
+    .future-block__photo {
+      top: 0;
+      bottom: 0;
+      background-color: $white;
+
+      @media all and (max-width: $tablet-bp) {
+        margin-top: 20px;
+        background-color: $purple;
+      }
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: auto;
+        display: block;
+        width: 100%;
+        height: 70%;
+        background-color: $white;
+        content: '';
+
+        @media all and (max-width: $tablet-bp) { display: none }
+      }
+
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        height: 30%;
+        background-color: $purple-dark;
+        content: '';
+        z-index: 0;
+
+        @media all and (max-width: $tablet-bp) { display: none }
+      }
+
+      .future-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 460px;
+        transform: translateX(-390px) translateY(136px);
+        z-index: 2;
+
+        @media all and (max-width: $tablet-bp) {
+          width: 100%;
+          position: static;
+          transform: none;
+        }
+      }
+    }
+  }
+
+  .future-quote {
+    position: absolute;
+    top: 36px;
+    right: 0;
+    left: 34px;
+    display: inline-block;
+    padding: 160px 30px;
+    background-color: $purple;
+
+    @media all and (max-width: $tablet-bp) {
+      top: auto;
+      bottom: 0;
+      left: 15px;
+      right: 15px;
+      overflow: hidden;
+      padding: 30px;
+    }
+  }
+}
+/* MAIN (end) */
